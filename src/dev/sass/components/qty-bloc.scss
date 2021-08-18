@@ -1,0 +1,12 @@
+.qty-bloc {
+  &__txt {
+    font-size: 14px;
+    color: $gray-1;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+
+    @media (max-width: 620px) {
+      display: none;
+    }
+  }
+}

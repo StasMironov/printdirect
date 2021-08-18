@@ -1,0 +1,35 @@
+.btn {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: 0.3s;
+  background-color: $blue-1;
+  color: white;
+  border-radius: 4px;
+  margin: 0 auto;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0096eaa1;
+  }
+
+  &--h45 {
+    height: 45px;
+  }
+
+  &--h50 {
+    height: 50px;
+  }
+
+  &--w144 {
+    width: 144px;
+  }
+
+  &--w145 {
+    width: 145px;
+    min-width: 145px;
+    padding: 0;
+  }
+}

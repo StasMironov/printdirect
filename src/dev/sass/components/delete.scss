@@ -1,0 +1,65 @@
+.delete {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    .delete__txt {
+      color: $blue-1;
+    }
+  }
+
+  @media (max-width: 767px) {
+    width: auto;
+    height: auto;
+    display: inline-block;
+  }
+
+  &__txt {
+    display: none;
+    color: $gray-7;
+    font-weight: 400;
+    transition: 0.3s;
+    pointer-events: none;
+
+    @media (max-width: 767px) {
+      display: block;
+    }
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 100%;
+    transition: 0.3s;
+    background-color: $gray-4;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+
+    @media (max-width: 767px) {
+      content: none;
+    }
+  }
+
+  &:after {
+    transform: rotate(45deg);
+  }
+
+  &:before {
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    &:after,
+    &:before {
+      background-color: $black-2;
+    }
+  }
+}

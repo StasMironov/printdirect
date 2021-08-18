@@ -1,0 +1,149 @@
+.cart-itog {
+  &__box {
+    border: 1px solid $gray-6;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: white;
+    padding: 21px 17px 17px;
+
+    @media (max-width: 620px) {
+      padding: 16px 15px 0px;
+    }
+  }
+
+  &__note {
+    color: rgb(84, 86, 88);
+    font-size: 14px;
+    padding: 21px 16px 17px;
+    line-height: 1.3;
+    font-weight: 400;
+
+    @media (max-width: 620px) {
+      font-size: 13px;
+      padding: 18px 16px 25px;
+      line-height: 1.4;
+      background-color: white;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+
+      @media (max-width: 620px) {
+        margin-bottom: 7px;
+      }
+    }
+
+    &--itog {
+      grid-template-columns: auto;
+
+      .cart-itog {
+        &__column {
+          display: flex;
+          align-items: center;
+
+          &:hover {
+            .tooltip__content {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+
+        .tooltip {
+          transform: translateY(2px);
+        }
+      }
+    }
+  }
+
+  &__cost,
+  &__discount,
+  &__itog {
+    text-align: right;
+  }
+
+  &__bottom {
+    border-top: 1px solid $gray-6;
+    .cart-itog {
+      &__txt {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__info {
+    font-size: 14px;
+    color: $blue-1;
+    margin-right: 12px;
+    font-weight: 400;
+  }
+
+  &__top {
+    padding-bottom: 21px;
+
+    @media (max-width: 620px) {
+      padding: 0px 15px 16px;
+    }
+  }
+
+  &__bottom {
+    padding-top: 18px;
+
+    @media (max-width: 620px) {
+      padding-top: 13px;
+    }
+
+    .cart-itog {
+      &__row {
+        @media (max-width: 620px) {
+          padding: 0 15px;
+          margin-bottom: 22px;
+        }
+      }
+    }
+  }
+
+  &__itog {
+    .cost {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .symbol {
+      font-size: 18px;
+    }
+  }
+
+  &__discount {
+    color: $red-1;
+  }
+
+  .symbol {
+    margin-left: 6px;
+    font-weight: 400;
+
+    @media (max-width: 620px) {
+      margin-left: 1px;
+    }
+  }
+
+  &__qty {
+    .symbol {
+      color: $gray-4;
+
+      @media (max-width: 620px) {
+        margin-left: 9px;
+      }
+    }
+  }
+
+  .cost {
+    margin-right: 4px;
+  }
+}
