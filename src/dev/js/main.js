@@ -119,7 +119,6 @@ $(() => {
     let target = event.target;
 
     if (target.classList.contains("delete")) {
-      console.log(1);
       shopCart.goodsDelete(target.dataset["articul"]);
       document.querySelector(".cart__cards").innerHTML = "";
       document.querySelector(".cart__cards").innerHTML = shopCart.render();

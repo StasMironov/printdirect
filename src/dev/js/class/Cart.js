@@ -5,7 +5,6 @@ class Cart {
     plusClass = "js-plus",
     minusClass = "js-minus",
     deleteClass = "delete",
-    currency = ""
   ) {
     this.items = items;
     this.plusClass = plusClass;
@@ -38,16 +37,12 @@ class Cart {
     let out = "";
     for (let key in this.items) {
       out += `<div class="cart-card js-card">`;
-
       out += `<div class="cart-card__column cart-card__column--img">`;
       out += `<img src="${this.items[key]["image"]}">`;
-      // out += `<button class="to-cart button-primary" data-articul="${key}">В корзину</button>`;
       out += `</div>`;
-
       out += `<div class="cart-card__column cart-card__column--title">`;
       out += `${this.items[key]["name"]}`;
       out += `</div>`;
-
       out += `<div class="cart-card__column cart-card__column--size">`;
       out += `<div class="qty-bloc">`;
       out += `<div class="qty-bloc__txt">Размер:</div>`;
@@ -58,26 +53,20 @@ class Cart {
       out += `</select>`;
       out += `</div>`;
       out += `</div>`;
-
       out += `<div class="cart-card__column cart-card__column--qty">`;
       out += `<div class="quantity">`;
-
       out += `<div class="quantity__txt">Кол-во:</div>`;
-
       out += `<div class="quantity__box">`;
       out += `<button class="minus js-minus" data-articul="${key}"><svg class="b-svg svg-minus"><use xlink:href="svg/symbol/sprite.svg#minus"></use></svg></button>`;
       out += `<input class="quantity__field js-input-qty" type="text" data-min="1" value=${this.items[key]["count"]} data-step="1">`;
       out += `<button class="plus js-plus" data-articul="${key}"><svg class="b-svg svg-plus"><use xlink:href="svg/symbol/sprite.svg#plus"></use></svg></button>`;
       out += `</div>`;
-
       out += `<div class="quantity__cost">`;
       out += `<span class="cost js-cost">${this.items[key]["price"]}</span>`;
       out += `<span class="symbol">₽/шт.</span>`;
       out += `</div>`;
-
       out += `</div>`;
       out += `</div>`;
-
       out += `<div class="cart-card__column cart-card__column--favourites">`;
       out += `<label class="favorite">`;
       out += `<input type="checkbox">`;
@@ -87,21 +76,18 @@ class Cart {
       out += `<span class="favorite__txt">В избранное</span>`;
       out += `</label>`;
       out += `</div>`;
-
       out += `<div class="cart-card__column cart-card__column--price">`;
       out += `<span class="cost">${
         this.items[key]["price"] * this.items[key]["count"]
       }</span>`;
       out += `<span class="symbol">₽</span>`;
       out += `</div>`;
-
       out += `<div class="cart-card__column cart-card__column--del">`;
       out += `<div class="delete" data-articul="${key}">`;
       out += `<div class="delete__txt"> Удалить`;
       out += `</div>`;
       out += `</div>`;
       out += `</div>`;
-
       out += `</div>`;
     }
 

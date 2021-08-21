@@ -4259,7 +4259,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
     });
     document.querySelector(".cart__cards").innerHTML = "", document.querySelector(".cart__cards").innerHTML = e.render(), a(".js-select"), l(), document.querySelector(".cart__cards").addEventListener("click", function (t) {
       var n = t.target;
-      return n.classList.contains("delete") ? (console.log(1), e.goodsDelete(n.dataset.articul), document.querySelector(".cart__cards").innerHTML = "", document.querySelector(".cart__cards").innerHTML = e.render(), a(".js-select"), l(), !0) : n.classList.contains("js-plus") ? (t.preventDefault(), e.goodsPlus(n.dataset.articul), document.querySelector(".cart__cards").innerHTML = "", document.querySelector(".cart__cards").innerHTML = e.render(), a(".js-select"), l(), !0) : n.classList.contains("js-minus") ? (e.goodsMinus(n.dataset.articul), document.querySelector(".cart__cards").innerHTML = "", document.querySelector(".cart__cards").innerHTML = e.render(), a(".js-select"), l(), !0) : void 0;
+      return n.classList.contains("delete") ? (e.goodsDelete(n.dataset.articul), document.querySelector(".cart__cards").innerHTML = "", document.querySelector(".cart__cards").innerHTML = e.render(), a(".js-select"), l(), !0) : n.classList.contains("js-plus") ? (t.preventDefault(), e.goodsPlus(n.dataset.articul), document.querySelector(".cart__cards").innerHTML = "", document.querySelector(".cart__cards").innerHTML = e.render(), a(".js-select"), l(), !0) : n.classList.contains("js-minus") ? (e.goodsMinus(n.dataset.articul), document.querySelector(".cart__cards").innerHTML = "", document.querySelector(".cart__cards").innerHTML = e.render(), a(".js-select"), l(), !0) : void 0;
     });
   });
 }, function (e, t, n) {
